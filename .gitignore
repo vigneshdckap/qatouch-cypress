@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.*
+!.env.example
+
+cypress/screenshots/
+cypress/videos/
+
+coverage/
+npm-debug.log*
+.DS_Store
