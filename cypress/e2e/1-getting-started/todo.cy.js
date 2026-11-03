@@ -6,6 +6,7 @@ describe('QA Touch reporter smoke test', () => {
 })
 
 
+
 describe('QA Touch reporter smoke test', () => {
   it('TR0178 publishes a passing result to QA Touch', () => {
     expect(true).to.equal(true)
