@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "test": "cypress run",
-  "cy:open": "cypress open",
-  "cy:run": "cypress run"
-},
+    "test": "cypress run",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -15,6 +15,7 @@
     "cypress": "^16.2.0"
   },
   "dependencies": {
-    "cypress-qatouch-reporter": "^1.2.1"
+    "cypress-qatouch-reporter": "^1.2.1",
+    "dotenv": "^18.0.9"
   }
 }

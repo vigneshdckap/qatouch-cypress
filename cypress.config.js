@@ -1,16 +1,16 @@
-const { defineConfig } = require("cypress");
+require('dotenv').config();
+
+const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
-  reporter: "cypress-qatouch-reporter",
-  reporterOptions: {
-  domain: process.env.QATOUCH_DOMAIN,
-  apiToken: process.env.QATOUCH_API_TOKEN,
-  projectKey: process.env.QATOUCH_PROJECT_KEY,
-  testRunId: process.env.QATOUCH_TEST_RUN_ID,
-},
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      config.env.QATOUCH_DOMAIN = process.env.QATOUCH_DOMAIN;
+      config.env.QATOUCH_API_TOKEN = process.env.QATOUCH_API_TOKEN;
+      config.env.QATOUCH_PROJECT_KEY = process.env.QATOUCH_PROJECT_KEY;
+      config.env.QATOUCH_TEST_RUN_ID = process.env.QATOUCH_TEST_RUN_ID;
+
+      return config;
     },
   },
 });
